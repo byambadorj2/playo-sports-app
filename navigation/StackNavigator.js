@@ -11,6 +11,7 @@ import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import BookScreen from '../screens/BookScreen';
 import PlayScreen from '../screens/PlayScreen';
+import VenueInfoScreen from '../screens/VenueInfoScreen';
 
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -89,6 +90,11 @@ const StackNavigator = () => {
         <Stack.Screen
           name="Main"
           component={BottomTabs}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Venue"
+          component={VenueInfoScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
